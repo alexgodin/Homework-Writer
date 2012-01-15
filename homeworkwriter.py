@@ -19,44 +19,64 @@ def write(): #write the homework
         agenda.write("Period 1:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="2":
+    elif per=="2":
         agenda.write("Period 2:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="3":
+    elif per=="3":
         agenda.write("Period 3:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="4":
+    elif per=="4":
         agenda.write("Period 4:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="5":
+    elif per=="5":
         agenda.write("Period 5:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="6":
+    elif per=="6":
         agenda.write("Period 6:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="7":
+    elif per=="7":
         agenda.write("Period 7:")
         agenda.write(hw)
         agenda.write("\n")
-    if per=="8":
+    elif per=="8":
         agenda.write("Period 8:")
         agenda.write(hw)
         agenda.write("\n")
+    else:
+        print("Non existant period")
+    again=input("Would you like to read the homework, clear, or read again? (yes or no)")
+    if again=="yes":
+        choice()
+    elif again=="no":
+        print("\n")
+    
     
 
 def clear():#clear the whole thing
    ajenda = open('agenda.txt', 'r+')
    ajenda.truncate()
+   again=input("Would you like to read the homework, clear, or read again? (yes or no)")
+   if again=="yes":
+       choice()
+   elif again=="no":
+       print("\n")
+   
 def read():#read the homework
     read=open("agenda.txt","r")
     readf=read.read()
     print(readf)
     read.close
+    again=input("Would you like to read the homework, clear, or read again? (yes or no)")
+    if again=="yes":
+        choice()
+    elif again=="no":
+        print("\n")
+    
 choice()
 agenda.close()
 
